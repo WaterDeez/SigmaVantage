@@ -14,23 +14,23 @@ Public Class MainMenu
     Public Sub GraphLoad()
 
     End Sub
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim url = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey="
-        Dim json = Await client.GetStringAsync(url)
-        Dim jss = Newtonsoft.Json.JsonConvert.DeserializeObject(Of Object)(json)
+    'Private Async Sub Button1_Click(sender As Object, e As EventArgs)
+    '    Dim url = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey="
+    '    Dim json = Await client.GetStringAsync(url)
+    '    Dim jss = Newtonsoft.Json.JsonConvert.DeserializeObject(Of Object)(json)
 
-        For Each Jproperty In jss("Time Series (Daily)")
-            Dim thedate = Jproperty.Name.ToString
-            TextBox1.Text &= thedate & Environment.NewLine
+    '    For Each Jproperty In jss("Time Series (Daily)")
+    '        Dim thedate = Jproperty.Name.ToString
+    '        TextBox1.Text &= thedate & Environment.NewLine
 
-            For Each Vproperty In jss("Time Series (Daily)")(thedate)
-                Dim thesubname = Mid(Vproperty.Name.ToString, 4)
-                Dim thevalue = Vproperty.Value.ToString
-                TextBox1.Text &= thesubname & ": " & thevalue & Environment.NewLine
-            Next
-            TextBox1.Text &= Environment.NewLine & Environment.NewLine
-        Next
-    End Sub
+    '        For Each Vproperty In jss("Time Series (Daily)")(thedate)
+    '            Dim thesubname = Mid(Vproperty.Name.ToString, 4)
+    '            Dim thevalue = Vproperty.Value.ToString
+    '            TextBox1.Text &= thesubname & ": " & thevalue & Environment.NewLine
+    '        Next
+    '        TextBox1.Text &= Environment.NewLine & Environment.NewLine
+    '    Next
+    'End Sub
 
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Selections.DrawAvatar(pbDBAvatar)
@@ -65,5 +65,15 @@ Public Class MainMenu
 
         Next
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Login.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        InformationScreen.Show()
+        Me.Close()
     End Sub
 End Class

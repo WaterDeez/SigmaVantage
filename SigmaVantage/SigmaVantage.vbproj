@@ -104,6 +104,12 @@
     <Compile Include="Menu\Config.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Menu\InformationScreen.Designer.vb">
+      <DependentUpon>InformationScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\InformationScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu\Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Menu\Config.resx">
       <DependentUpon>Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\InformationScreen.resx">
+      <DependentUpon>InformationScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
