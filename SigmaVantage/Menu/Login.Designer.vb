@@ -23,7 +23,7 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
-        Me.UserTBox = New System.Windows.Forms.TextBox()
+        Me.usernameTBox = New System.Windows.Forms.TextBox()
         Me.PassTBox = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -31,12 +31,12 @@ Partial Class Login
         Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'UserTBox
+        'usernameTBox
         '
-        Me.UserTBox.Location = New System.Drawing.Point(12, 29)
-        Me.UserTBox.Name = "UserTBox"
-        Me.UserTBox.Size = New System.Drawing.Size(156, 20)
-        Me.UserTBox.TabIndex = 0
+        Me.usernameTBox.Location = New System.Drawing.Point(12, 29)
+        Me.usernameTBox.Name = "usernameTBox"
+        Me.usernameTBox.Size = New System.Drawing.Size(156, 20)
+        Me.usernameTBox.TabIndex = 0
         '
         'PassTBox
         '
@@ -44,6 +44,7 @@ Partial Class Login
         Me.PassTBox.Name = "PassTBox"
         Me.PassTBox.Size = New System.Drawing.Size(156, 20)
         Me.PassTBox.TabIndex = 1
+        Me.PassTBox.UseSystemPasswordChar = True
         '
         'Button2
         '
@@ -91,7 +92,7 @@ Partial Class Login
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PassTBox)
-        Me.Controls.Add(Me.UserTBox)
+        Me.Controls.Add(Me.usernameTBox)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -102,7 +103,7 @@ Partial Class Login
 
     End Sub
 
-    Friend WithEvents UserTBox As TextBox
+    Friend WithEvents usernameTBox As TextBox
     Friend WithEvents PassTBox As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button

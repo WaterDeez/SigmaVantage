@@ -77,6 +77,18 @@ Namespace My
                 Me("EncryptedPassword") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2MW5GQ5SHFQ121FB")>  _
+        Public Property APIkey() As String
+            Get
+                Return CType(Me("APIkey"),String)
+            End Get
+            Set
+                Me("APIkey") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -8,5 +8,8 @@
     <Setting Name="EncryptedPassword" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="APIkey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2MW5GQ5SHFQ121FB</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
